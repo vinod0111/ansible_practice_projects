@@ -1,0 +1,14 @@
+---
+- name: limit example play
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: tell us which hosts we area on
+      debug:
+        var: inventory_hostname
+
+    - name: grab variables from backend
+      debug:
+        var: hostvars['ec2-54-89-127-223.compute-1.amazonaws.com'].node_name
+        # worker2's hostname in hostvars[worker2's_hostname].node_name
