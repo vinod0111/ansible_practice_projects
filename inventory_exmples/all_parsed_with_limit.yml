@@ -12,4 +12,6 @@
       debug:
         var: hostvars['ec2-54-89-127-223.compute-1.amazonaws.com'].node_name
         # worker2's hostname in hostvars[worker2's_hostname].node_name
-        
+
+## running
+# ansible-playbook -i ./host.ini all_parsed_with_limit.yml -c local --limit worker1
